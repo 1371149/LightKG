@@ -1,4 +1,12 @@
+r"""
+KGRec
+##################################################
+Reference:
+    Yuhao Yang et al. "Knowledge Graph Self-Supervised Rationalization for Recommendation" in KDD 2023.
 
+Reference code:
+    https://github.com/HKUDS/KGRec
+"""
 import random
 import numpy as np
 import torch
