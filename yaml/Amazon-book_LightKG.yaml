@@ -1,0 +1,11 @@
+embedding_size: 64
+benchmark_filename: ['train','valid','test']
+layer: 2
+train_neg_sample_args: {'sample_num':10}
+learning_rate: 0.0001
+mess_dropout_rate: 0.1
+weight_decay: 1e-5
+cos_loss: 1
+user_loss: 1e-6
+item_loss: 1e-7
+stopping_step: 20
