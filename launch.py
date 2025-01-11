@@ -22,12 +22,12 @@ from recbole.data.interaction import Interaction
 import torch.profiler as profiler
 import torch.nn.functional as F
 from recbole.quick_start.quick_start import load_data_and_model
+import argparse
 
 # Import custom models
 from LightKG import *
 from CFKG import *
 from KGAT import *
-from KGRec import *
 from CKE import *
 from RippleNet import *
 from KGIN import *
@@ -35,12 +35,27 @@ from KGCN import *
 from LightGCN import *
 from MCCLK import *
 
+
+
+parser = argparse.ArgumentParser(description="Run LightKG")
+parser.add_argument("--dataset", type=str,default="lastfm", help="choose dataset from ml-1m, lastfm, Amazon-book, book-crossing.")
+args = parser.parse_args()
+
 # Configuration setup
 config_dict = {'seed': 2020}  # Set initial seed for reproducibility
-config_file_list = ['./yaml/ml-1m_LightKG.yaml']  # Load configuration file. If you want to use other configuration, you should change "config_file_list".
+
+# Load configuration file
+if args.dataset == "lastfm":
+    config_file_list = ['./yaml/lastfm_lightkg.yaml']
+elif args.dataset == "ml-1m":
+    config_file_list = ['./yaml/ml-1m_lightkg.yaml']
+elif args.dataset == "book-crossing":
+    config_file_list = ['./yaml/book-crossing_lightkg.yaml']
+elif args.dataset == "Amazon-book":
+    config_file_list = ['./yaml/Amazon-book_lightkg.yaml']
 
 # Initialize configuration
-config = Config(model=LightKG, dataset='ml-1m', config_file_list=config_file_list, config_dict=config_dict) #If you want to user other dataset, change "Config( dataset='target dataset')" 
+config = Config(model=LightKG, dataset=args.dataset, config_file_list=config_file_list, config_dict=config_dict)
 
 # Set seed for reproducibility
 init_seed(config['seed'], config['reproducibility'])
@@ -54,9 +69,16 @@ data = create_dataset(config)
 logger.info(data)  # Log dataset information
 train_data, valid_data, test_data = data_preparation(config, data)
 
+# Reset seed for model initialization
+config['seed'] = 200
+init_seed(config['seed'], config['reproducibility'])
 
 # Initialize the model
 model = LightKG(config=config, dataset=train_data._dataset).to(config['device'])
+
+# Reset seed back to original for training
+config['seed'] = 2020
+init_seed(config['seed'], config['reproducibility'])
 
 # Log model information
 logger.info(model)
