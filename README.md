@@ -3,7 +3,7 @@ Official implement of paper "LightKG: Advancing Knowledge-Aware Recommendations 
 ## Introduction
 LightKG is a simplified yet powerful Graph Neural Network (GNN)-based Knowledge Graph-aware Recommender System designed to improve recommendation accuracy and training efficiency, particularly in sparse interaction scenarios.
 
-##Enviroment Requirements
+## Enviroment Requirements
 Tested on python 3.9 and Ubuntu 20.04.
 1. [pytorch](https://pytorch.org/)==2.0.0
 2. [recbole](https://recbole.io/)==1.1.1
