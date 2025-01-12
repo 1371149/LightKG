@@ -42,4 +42,8 @@ python main.py --dataset book-crossing
 ## Tips
 1. If you want to test our model, please run "python main.py", which by default runs on the Last.fm dataset.
 2. If you want to change dataset or use your own dataset, please make sure that the dataset you used is in the file "dataset", then, change the parameter "dataset" in main.py.
+3. We provide the code for other GNN-based KGRSs. Some of these are sourced from RecBole, while KGRec and DiffKG are obtained from SSLRec. We extend our gratitude to RecBole and SSLRec for their significant contributions to the field of recommendation systems.
 
+## Reference
+[Recbole](https://recbole.io/cn/index.html)
+[SSLRec](https://github.com/HKUDS/SSLRec)
