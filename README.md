@@ -1,4 +1,5 @@
-Official implement of paper "LightKG: Advancing Knowledge-Aware Recommendations with Simplified GNN Architecture", SIGIR 2025.
+## LightKG
+The code implementation of paper "LightKG: Advancing Knowledge-Aware Recommendations with Simplified GNN Architecture".
 
 ## Introduction
 LightKG is a simplified yet powerful Graph Neural Network (GNN)-based Knowledge Graph-aware Recommender System designed to improve recommendation accuracy and training efficiency, particularly in sparse interaction scenarios.
@@ -20,25 +21,25 @@ You can simply use the processed dataset provided by us. If you want to process 
  We provide the parameters for LightKG on the ML-1M, Last.FM, Book-Crossing and Amazon-book. If you want to run LightKG, choose your target dataset and run as follows:
 * Last.FM dataset
 ```
-python launch.py --dataset lastfm
+python main.py --dataset lastfm
 ```
 
 * Amazon-book dataset
 ```
-python launch.py --dataset Amazon-book
+python main.py --dataset Amazon-book
 ```
 
 * ML-1M dataset
 ```
-python launch.py --dataset ml-1m
+python main.py --dataset ml-1m
 ```
 
 * Book-Crossing dataset
 ```
-python launch.py --dataset book-crossing
+python main.py --dataset book-crossing
 ```
 
 ## Tips
-1. If you want to test our model, please run "python launch.py", which by default runs on the Last.fm dataset.
-2. If you want to change dataset or use your own dataset, please make sure that the dataset you used is in the file "dataset", then, change the parameter "dataset" in launch.py.
+1. If you want to test our model, please run "python main.py", which by default runs on the Last.fm dataset.
+2. If you want to change dataset or use your own dataset, please make sure that the dataset you used is in the file "dataset", then, change the parameter "dataset" in main.py.
 
