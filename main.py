@@ -25,15 +25,15 @@ from recbole.quick_start.quick_start import load_data_and_model
 import argparse
 
 # Import custom models
-from LightKG import *
-from CFKG import *
-from KGAT import *
-from CKE import *
-from RippleNet import *
-from KGIN import *
-from KGCN import *
-from LightGCN import *
-from MCCLK import *
+from model.LightKG import *
+from model.CFKG import *
+from model.KGAT import *
+from model.CKE import *
+from model.RippleNet import *
+from model.KGIN import *
+from model.KGCN import *
+from model.LightGCN import *
+from model.MCCLK import *
 
 
 
