@@ -46,13 +46,13 @@ config_dict = {'seed': 2020}  # Set initial seed for reproducibility
 
 # Load configuration file
 if args.dataset == "lastfm":
-    config_file_list = ['./yaml/lastfm_lightkg.yaml']
+    config_file_list = ['./yaml/lastfm_LightKG.yaml']
 elif args.dataset == "ml-1m":
-    config_file_list = ['./yaml/ml-1m_lightkg.yaml']
+    config_file_list = ['./yaml/ml-1m_LightKG.yaml']
 elif args.dataset == "book-crossing":
-    config_file_list = ['./yaml/book-crossing_lightkg.yaml']
+    config_file_list = ['./yaml/book-crossing_LightKG.yaml']
 elif args.dataset == "Amazon-book":
-    config_file_list = ['./yaml/Amazon-book_lightkg.yaml']
+    config_file_list = ['./yaml/Amazon-book_LightKG.yaml']
 
 # Initialize configuration
 config = Config(model=LightKG, dataset=args.dataset, config_file_list=config_file_list, config_dict=config_dict)
