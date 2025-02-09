@@ -1,5 +1,5 @@
 ## LightKG
-The code implementation of paper "LightKG: Advancing Knowledge-Aware Recommendations with Simplified GNN Architecture".
+The code implementation of paper "LightKG: Efficient Knowledge-Aware Recommendations with Simplified GNN Architecture".
 
 ## Introduction
 LightKG is a simplified yet powerful Graph Neural Network (GNN)-based Knowledge Graph-aware Recommender System designed to improve recommendation accuracy and training efficiency, particularly in sparse interaction scenarios.
@@ -43,4 +43,4 @@ python main.py --dataset book-crossing
 1. If you want to test our model, please run "python main.py", which by default runs on the Last.fm dataset.
 2. If you want to change dataset or use your own dataset, please make sure that the dataset you used is in the file "dataset", then, change the parameter "dataset" in main.py.
 3. We provide the code for other GNN-based KGRSs. Some of these are sourced from [Recbole](https://recbole.io/cn/index.html), while KGRec and DiffKG are obtained from [SSLRec](https://github.com/HKUDS/SSLRec). We extend our gratitude to RecBole and SSLRec for their significant contributions to the field of recommender systems.
-
+4. Since CL-SDKG is not open-source and we have not obtained permission from the original authors, we are unable to release its code publicly. If you need it, you can contact the original authors via email, as we did, to inquire.
