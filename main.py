@@ -25,7 +25,7 @@ from recbole.quick_start.quick_start import load_data_and_model
 import argparse
 
 # Import custom models
-from model.LightKG import *
+from LightKG import *
 from model.CFKG import *
 from model.KGAT import *
 from model.CKE import *
