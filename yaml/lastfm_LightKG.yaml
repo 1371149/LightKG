@@ -1,6 +1,7 @@
 embedding_size: 64
 layer: 2
 learning_rate: 0.0005
+node_dropout_rate: 0.1
 mess_dropout_rate: 0.1
 weight_decay: 5e-5
 cos_loss: 1
