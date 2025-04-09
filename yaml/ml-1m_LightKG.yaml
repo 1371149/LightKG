@@ -3,6 +3,7 @@ layer: 2
 train_neg_sample_args: {'sample_num':1}
 learning_rate: 0.01
 benchmark_filename: ['train','valid','test']
+node_dropout_rate: 0.1
 mess_dropout_rate: 0.0
 weight_decay: 1e-5
 cos_loss: 1
