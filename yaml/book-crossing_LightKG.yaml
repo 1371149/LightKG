@@ -4,6 +4,7 @@ learning_rate: 0.0005
 stopping_step: 20
 benchmark_filename: ['train','valid','test']
 train_neg_sample_args: {'sample_num':5}
+node_dropout_rate: 0.0
 mess_dropout_rate: 0.0
 weight_decay: 1e-5
 cos_loss: 1
